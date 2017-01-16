@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TP_SIG_Distance.jnlp">
+  <information>
+    <title>TP_SIG_Distance</title>
+    <vendor>walid y</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TP_SIG_Distance.jar" size="21977" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="TP_SIG_Distance" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="tp_sig_distance.TP_SIG_Distance"  name="TP_SIG_Distance" />
+  <update check="always"/>
+</jnlp>

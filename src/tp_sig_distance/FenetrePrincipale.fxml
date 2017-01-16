@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="630.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tp_sig_distance.FenetrePrincipaleController">
+   <children>
+      <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="161.0" layoutY="57.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../../Downloads/cuteness/jdjdjd.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="30.0" layoutY="100.0" prefHeight="220.0" prefWidth="280.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="14.0" prefHeight="35.0" prefWidth="120.0" text="Lieu A" textAlignment="CENTER" textFill="#1d9b45">
+               <font>
+                  <Font name="Bauhaus 93" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="degre_long_A" layoutX="14.0" layoutY="92.0" prefHeight="25.0" prefWidth="65.0" promptText="degré" />
+            <TextField fx:id="min_long_A" layoutX="89.0" layoutY="92.0" prefHeight="25.0" prefWidth="65.0" promptText="minute" />
+            <TextField fx:id="seconde_long_A" layoutX="164.0" layoutY="92.0" prefHeight="25.0" prefWidth="65.0" promptText="seconde" />
+            <TextField fx:id="seconde_lat_A" layoutX="164.0" layoutY="161.0" prefHeight="25.0" prefWidth="65.0" promptText="seconde" />
+            <TextField fx:id="min_lat_A" layoutX="89.0" layoutY="161.0" prefHeight="25.0" prefWidth="65.0" promptText="minute" />
+            <TextField fx:id="degre_lat_A" layoutX="14.0" layoutY="161.0" prefHeight="25.0" prefWidth="65.0" promptText="degré" />
+            <Label layoutX="10.0" layoutY="61.0" text="Longitude">
+               <font>
+                  <Font name="Bauhaus 93" size="16.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="128.0" text="Latitude">
+               <font>
+                  <Font name="Bauhaus 93" size="16.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="Nord_A" layoutX="236.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="N">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#set_Nord_Sud" text="N" />
+                <MenuItem mnemonicParsing="false" onAction="#set_Nord_Sud" text="S" />
+              </items>
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="Est_A" layoutX="236.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="E">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#set_Est_Ouest_A" text="E" />
+                  <MenuItem mnemonicParsing="false" onAction="#set_Est_Ouest_A" text="O" />
+               </items>
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </MenuButton>
+            <ImageView fitHeight="58.0" fitWidth="57.0" layoutX="41.0" layoutY="1.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Location.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="320.0" layoutY="100.0" prefHeight="220.0" prefWidth="280.0">
+         <children>
+            <Label alignment="CENTER" layoutX="68.0" layoutY="14.0" prefHeight="35.0" prefWidth="120.0" text="Lieu B" textFill="#1d9b45">
+               <font>
+                  <Font name="Bauhaus 93" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="degre_long_B" layoutX="14.0" layoutY="92.0" prefHeight="25.0" prefWidth="65.0" promptText="degré" />
+            <TextField fx:id="min_long_B" layoutX="89.0" layoutY="92.0" prefHeight="25.0" prefWidth="65.0" promptText="minute" />
+            <TextField fx:id="seconde_long_B" layoutX="164.0" layoutY="92.0" prefHeight="25.0" prefWidth="65.0" promptText="seconde" />
+            <TextField fx:id="seconde_lat_B" layoutX="164.0" layoutY="163.0" prefHeight="25.0" prefWidth="65.0" promptText="seconde" />
+            <TextField fx:id="degre_lat_B" layoutX="14.0" layoutY="163.0" prefHeight="25.0" prefWidth="65.0" promptText="degré" />
+            <TextField fx:id="min_lat_B" layoutX="89.0" layoutY="163.0" prefHeight="25.0" prefWidth="65.0" promptText="minute" />
+            <Label layoutX="10.0" layoutY="61.0" text="Longitude">
+               <font>
+                  <Font name="Bauhaus 93" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="130.0" text="Latitude">
+               <font>
+                  <Font name="Bauhaus 93" size="16.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="Nord_B" layoutX="237.0" layoutY="163.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="N">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#set_Nord_Sud_B" text="N" />
+                  <MenuItem mnemonicParsing="false" onAction="#set_Nord_Sud_B" text="S" />
+               </items>
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="Est_B" layoutX="237.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="E">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#set_Est_Ouest_B" text="E" />
+                  <MenuItem mnemonicParsing="false" onAction="#set_Est_Ouest_B" text="O" />
+               </items>
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </MenuButton>
+            <ImageView fitHeight="58.0" fitWidth="57.0" layoutX="41.0" layoutY="1.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Location.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="91.0" layoutY="14.0" text="Calcul de la distance à vol d'oiseau entre deux lieux" textAlignment="CENTER" textFill="#1d9b45" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+      </Label>
+      <MenuButton fx:id="Rayon_terre" layoutX="26.0" layoutY="336.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="Par défault">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#set_Rayon_terre" text="Par défault" />
+            <MenuItem mnemonicParsing="false" onAction="#set_Rayon_terre" text="WGS 84" />
+            <MenuItem mnemonicParsing="false" onAction="#set_Rayon_terre" text="WGS 72" />
+          <MenuItem mnemonicParsing="false" onAction="#set_Rayon_terre" text="Clarke 1866" />
+          <MenuItem onAction="#set_Rayon_terre" text="Clarke 1880" />
+            <MenuItem mnemonicParsing="false" onAction="#set_Rayon_terre" text="Everest India" />
+        </items>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </MenuButton>
+      <Label layoutX="50.0" layoutY="390.0" text="Distance à vol d'oiseau entre A et B :" textFill="#28d35e">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="306.0" text="Rayon de la terre :" textFill="#1d9b45">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Distance" editable="false" layoutX="372.0" layoutY="390.0" prefHeight="25.0" prefWidth="157.0" promptText="0">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></TextField>
+      <Label layoutX="535.0" layoutY="391.0" prefHeight="28.0" prefWidth="35.0" text="KM">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="315.0" layoutY="100.0" maxHeight="190.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Separator layoutX="25.0" layoutY="100.0" prefHeight="1.0" prefWidth="290.0" />
+      <Separator layoutX="315.0" layoutY="100.0" prefHeight="1.0" prefWidth="290.0" />
+      <Button layoutX="338.0" layoutY="334.0" mnemonicParsing="false" onAction="#Calculer_Distance" text="Calculer">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="Valeur_Rayon" alignment="CENTER" editable="false" layoutX="170.0" layoutY="334.0" prefHeight="30.0" prefWidth="111.0" text="6378.000">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="286.0" layoutY="335.0" prefHeight="25.0" prefWidth="27.0" text="KM">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
